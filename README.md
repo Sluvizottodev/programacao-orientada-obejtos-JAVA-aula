@@ -23,9 +23,3 @@ P1:
 P2:
 ...
 
-## 💻 Como executar os códigos
-
-1. Instale o [Java JDK](https://jdk.java.net/)
-2. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/poo-java-faculdade.git
