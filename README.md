@@ -1,18 +1,31 @@
-## Getting Started
+# Programação Orientada a Objetos com Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+📚 Repositório de estudos da disciplina de **POO (Programação Orientada a Objetos)** no curso de **Sistemas de Informação**, utilizando a linguagem **Java**.
 
-## Folder Structure
+## ✅ Conteúdo Estudado
 
-The workspace contains two folders by default, where:
+P1:
+- Variáveis e Comentários
+- Convenções e Operadores do Java
+- Controle de Fluxo (`if`, `else`, `while`, `for`)
+- Escopo e Casting
+- Métodos e Classes
+- Instanciação de Objetos
+- Encapsulamento (`get` / `set`)
+- Herança
+- Polimorfismo
+- Classes Abstratas
+- Interfaces
+- Agregação e Composição
+- Exercícios práticos
+- IDEs: BlueJ, Eclipse, VS Code
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+P2:
+...
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 💻 Como executar os códigos
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1. Instale o [Java JDK](https://jdk.java.net/)
+2. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/poo-java-faculdade.git
