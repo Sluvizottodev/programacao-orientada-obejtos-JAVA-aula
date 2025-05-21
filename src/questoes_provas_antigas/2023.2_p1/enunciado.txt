@@ -1,0 +1,47 @@
+Questões da Prova:
+
+=============
+1. Classe Veículo
+Criar a classe Veículo com os atributos: modelo, ano, valorMercado. O construtor deve receber essas 3 informações inicialmente, mas os valores podem ser alterados posteriormente. A classe também deve ter um atributo motor (tipo a ser definido pelo aluno).
+Regras:
+
+A classe Veículo não pode ser instanciada diretamente (deve ser abstrata).
+
+Garantir que todos os objetos derivados de Veículo possam representar-se adequadamente (ex: polimorfismo).
+(Valor: 2.0 pontos)
+
+=============
+2. Subclasses de Veículo
+Criar as seguintes subclasses que herdam de Veículo:
+a. Classe Carro com as mesmas características de Veículo.
+b. Classe Caminhão que adiciona um atributo inteiro obrigatório capacidadeCarga (deve ser fornecido no construtor).
+(Valor: 3.0 pontos)
+
+=============
+3. Cálculo de Imposto
+Cada tipo de veículo (subclasse) deve ter um método gerarImposto() para calcular seu imposto específico:
+
+Carro: 10% do valor de mercado.
+
+Caminhão: 20% do valor de mercado.
+Requisitos:
+
+Garantir que todas as subclasses de Veículo implementem gerarImposto().
+(Valor: 2.0 pontos)
+
+=============
+4. Classe para Acumular Impostos
+Criar a classe SistemaImpostos com:
+
+Método acumularImposto(Veiculo veiculo): soma o imposto gerado pelo veículo ao atributo totalImpostos.
+Método getTotalImpostos(): retorna o valor acumulado de impostos.
+(Valor: 2.0 pontos)
+
+=============
+Observações Gerais:
+
+Não é necessário criar uma classe de teste com main.
+A ausência de boas práticas (encapsulamento, herança, polimorfismo) resultará em perda de pontos.
+Para atributos não especificados (ex: motor), basta incluir comentários como //get e set ou //set.
+
+Dica: Use classes abstratas e métodos abstratos para garantir a implementação obrigatória dos requisitos.
