@@ -1,0 +1,26 @@
+🔹Herança
+O que é:
+Herança permite que uma classe filha (subclasse) herde atributos e métodos de uma classe pai (superclasse). Serve para reaproveitar código e modelar hierarquias.
+
+Como usar:
+
+Crie uma superclasse com atributos e métodos comuns.
+Crie uma subclasse que estende (extends) essa superclasse.
+A subclasse pode usar os métodos herdados ou sobrescrevê-los (@Override).
+
+Exemplo:
+
+class Animal {
+    void emitirSom() {
+        System.out.println("Som genérico");
+    }
+}
+
+class Cachorro extends Animal {
+    @Override
+    void emitirSom() {
+        System.out.println("Latido");
+    }
+}
+Uso:
+Cachorro herda o método emitirSom() de Animal, mas sobrescreve com comportamento próprio.
