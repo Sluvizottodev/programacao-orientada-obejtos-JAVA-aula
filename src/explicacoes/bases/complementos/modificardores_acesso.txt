@@ -1,0 +1,64 @@
+📌 MODIFICADORES DE ACESSO EM JAVA
+
+Modificadores de acesso definem *quem pode acessar* atributos, métodos e classes em Java.
+
+Existem 4 principais níveis de acesso:
+
+1. public
+🔓 Acesso total de qualquer lugar do projeto.
+
+✔ Pode ser acessado de:
+- Outras classes
+- Outros pacotes
+
+🟢 Ideal para: métodos principais, classes que devem ser visíveis em toda a aplicação.
+
+2. private
+🔒 Acesso restrito apenas *dentro da própria classe*.
+
+✖ NÃO pode ser acessado por:
+- Subclasses
+- Outras classes, nem mesmo no mesmo pacote
+
+🟢 Ideal para: atributos e métodos que não devem ser modificados diretamente. Usado com `get` e `set`.
+
+3. protected
+🔐 Acesso permitido em:
+
+- Mesma classe
+- Subclasses (mesmo em outro pacote)
+- Classes do mesmo pacote
+
+🟢 Ideal para: herança, onde subclasses precisam acessar certos métodos ou atributos.
+
+
+4. (default) – Sem modificador
+    Quando *nenhum modificador* é usado.
+    Acesso apenas dentro do mesmo pacote (package-private).
+    NÃO pode ser acessado por classes de outro pacote, mesmo que sejam subclasses.
+
+
+Exemplo prático:
+```
+public class Pessoa {
+    private String nome;        // só acessível dentro da classe
+    protected int idade;        // acessível em subclasses
+    String cpf;                 // default: acessível só no mesmo pacote
+    public void mostrarInfo() { // acessível de qualquer lugar
+        System.out.println(nome + ", " + idade + ", " + cpf);
+    }
+}
+
+📌 RESUMO TABELA:
+
+Modificador |   Mesma classe    |   Mesmo pacote	|   Subclasse (outro pacote)	|   Outros
+public	            ✅	                ✅	                    ✅	                 ✅
+protected	        ✅	                ✅  	                    ✅	                 ❌
+default	            ✅	                ✅	                    ❌	                 ❌
+private	            ✅	                ❌	                    ❌	                 ❌
+
+──────────────────────────────────────────────
+
+✅ DICA:
+- Use private para proteger dados e depois crie getters e setters para acessar/modificar quando necessário. 
+- Use public com cuidado para não expor mais do que o necessário.
