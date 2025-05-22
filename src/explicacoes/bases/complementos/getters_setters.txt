@@ -1,4 +1,4 @@
-📌 Getters e Setters – Resumo
+📌 Getters e Setters
 
 O que são:
 
