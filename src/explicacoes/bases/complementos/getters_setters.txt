@@ -1,0 +1,37 @@
+📌 Getters e Setters – Resumo
+
+O que são:
+
+- Getters e setters são métodos usados para acessar e modificar atributos private de uma classe.
+- Fazem parte do encapsulamento, protegendo o acesso direto aos dados da classe.
+
+✔ Getter (getNome):
+
+    Retorna o valor de um atributo.
+    Não recebe parâmetro.
+
+public String getNome() {
+    return this.nome;
+}
+
+✔ Setter (setNome):
+
+    Altera o valor de um atributo.
+    Recebe um parâmetro e geralmente não retorna nada.
+
+public void setNome(String nome) {
+    this.nome = nome;
+}
+
+💡 Quando usar:
+
+Sempre que o atributo for private, e você quiser permitir leitura/escrita de forma controlada.
+
+⛔ Quando NÃO usar:
+
+Se o atributo for constante (final) ou não precisar ser acessado/modificado externamente.
+
+📝 Dica rápida:
+
+Getter → retorna
+Setter → recebe (parâmetro)
