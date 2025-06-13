@@ -1,0 +1,5 @@
+Tesoureiro#Rafael#5000
+Gerente#Maria#6000
+Gerente#Renata#2000
+Tesoureiro#Ana#1500
+Gerente#Fulano#3000
