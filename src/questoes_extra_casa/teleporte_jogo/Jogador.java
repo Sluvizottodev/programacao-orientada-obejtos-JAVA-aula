@@ -19,7 +19,7 @@ public class Jogador {
         if(x < 0 || y < 0){
             throw new TeleporteInvalidoException("Posição inválida!");
         }
-        System.out.println("O jogador foi teleportado para (" + x + ", "+ y);
+        System.out.println("O jogador foi teleportado para (" + x + ", "+ y + ")");
     }
 }
 

@@ -5,7 +5,7 @@ public class TesteTeleporte{
         Jogador j1 = new Jogador("Rafael");
         
         try {
-            j1.teletransportar(121, 232);
+            j1.teletransportar(-121, 232);
         } catch (Exception e) {
             System.out.println("Erro: " + e.getMessage());
         } finally{
