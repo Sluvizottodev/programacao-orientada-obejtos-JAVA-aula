@@ -30,5 +30,12 @@ public class Contato {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-    
+
+    public Calendar getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Calendar dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
 }
