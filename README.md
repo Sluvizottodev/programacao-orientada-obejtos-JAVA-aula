@@ -4,7 +4,7 @@
 
 ## ✅ Conteúdo Estudado
 
-P1:
+### P1:
 - Variáveis e Comentários
 - Convenções e Operadores do Java
 - Controle de Fluxo (`if`, `else`, `while`, `for`)
@@ -17,9 +17,14 @@ P1:
 - Classes Abstratas
 - Interfaces
 - Agregação e Composição
-- Exercícios práticos
-- IDEs: BlueJ, Eclipse, VS Code
 
-P2:
-...
-
+### P2:
+- conteúdo da p1 +
+- Interfaces e Sobrecarga
+- Tratamento de Exceções
+- Pacote `java.io`
+- Collections Framework
+- Programação Concorrente e Threads
+- Ferramentas: `jar` e `javadoc`
+- O pacote `java.lang`
+- JDBC
