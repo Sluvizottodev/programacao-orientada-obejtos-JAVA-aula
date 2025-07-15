@@ -35,7 +35,8 @@ Além dos tópicos da P1, foram abordados:
 - Programação Concorrente e Threads  
 - Criação de arquivos `jar` e documentação com `javadoc`  
 - Pacote `java.lang`  
-- JDBC para acesso a banco de dados  
+- JDBC para acesso a banco de dados
+- Padrões como DAO, Singleton e Factory
 
 ---
 
