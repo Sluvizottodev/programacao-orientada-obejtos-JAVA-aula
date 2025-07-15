@@ -1,42 +1,44 @@
 package explicacoes.padroes_de_projeto.DAO;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ContatoDAO {
     private Connection conexao;
-    public ContatoDAO(){
+    private PreparedStatement stmt;
+    private String sql;
+
+    public ContatoDAO() {
         this.conexao = new ConnectionFactory().getConnection();
     }
 
-    public void adiciona (Contato c){
-        PreparedStatement stmt = null;
+    public void adiciona(Contato c) {
         try {
-            if(conexao.isClosed())
-                conexao = new ConnectionFactory().getConexao();
+            if (conexao.isClosed()) {
+                conexao = new ConnectionFactory().getConnection();
+            }
         } catch (SQLException e) {
-            System.out.println("Erro ao obter conexão " + e.getMessage());
+            System.out.println("Erro ao verificar conexão: " + e.getMessage());
         }
-        //instrução SQL p/ add contato
-        this.comandoSQL = "INSERT INTO contatos (nome, email, endereco, dataNascimento) VALUES (?, ?, ?, ?)";
+
+        sql = "INSERT INTO contatos (nome, email, endereco, dataNascimento) VALUES (?, ?, ?, ?)";
 
         try {
-            this.stmt = this.conexao.prepareStatement(comandoSQL);
-
-            //passando args
-            this.stmt.setString(1, c.getNome());
-            this.stmt.setString(2, c.getEmail());
-            this.stmt.setString(3, c.getEndereco());
-            this.stmt.setDate(4, new java.sql.Date(c.getDataNascimento().getTimeInMillis()));
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, c.getNome());
+            stmt.setString(2, c.getEmail());
+            stmt.setString(3, c.getEndereco());
+            stmt.setDate(4, new java.sql.Date(c.getDataNascimento().getTimeInMillis()));
             stmt.execute();
         } catch (SQLException e) {
-             System.out.println("Erro ao adicionar " + e.getMessage());
-        } finally{
+            System.out.println("Erro ao adicionar: " + e.getMessage());
+        } finally {
             try {
-                stmt.close();
-                conexao.close();
+                if (stmt != null) stmt.close();
+                if (conexao != null) conexao.close();
             } catch (SQLException e) {
-                System.out.println("Erro ao fechar conexão " + e.getMessage());
+                System.out.println("Erro ao fechar recursos: " + e.getMessage());
             }
         }
     }
