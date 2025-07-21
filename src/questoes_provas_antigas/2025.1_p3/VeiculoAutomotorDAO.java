@@ -22,4 +22,23 @@ public class VeiculoAutomotorDAO {
         }
         return linhasAfetadas;
     }
+
+    public List<VeiculoAutomotor> obterTodos() throws DominioException{
+        List<VeiculoAutomotor> veiculos = new ArrayList<>();
+        this.sql = "SELECT * FROM veiculo_automotor";
+        try{
+            this.stmt = con.PreparedStatement(this.sql);
+            this.rs = this.stmt.executeQuery();
+            while(rs.next()){
+                VeiculoAutomotor va = new VeiculoAutomotor(
+                    rs.getString("modelo"), rs.getInt("ano"), rs.getDouble("valor_de_mercado")
+                );
+                va.setId(rs.getInt("id"));
+                veiculo.add(va);
+            }
+        }catch (SQLException e){
+            throw new DominioException("Erro ao listar todos." + e.getMessage());
+        }
+        return veiculos;
+    }
 }
