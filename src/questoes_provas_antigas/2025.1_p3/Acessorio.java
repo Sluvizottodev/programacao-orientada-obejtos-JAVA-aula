@@ -1,3 +1,4 @@
+package src.questoes_provas_antigas._2025_1_p3;
 public class Acessorio implements Tributavel{
     private int id;
     private String descricao;
@@ -17,7 +18,7 @@ public class Acessorio implements Tributavel{
         this.descricao = descricao;
     }
 
-    public void setValor (String valor){
+    public void setValor (double valor){
         this.valor = valor;
     }
 }
