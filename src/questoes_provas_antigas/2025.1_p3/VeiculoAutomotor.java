@@ -1,3 +1,5 @@
+package src.questoes_provas_antigas._2025_1_p3;
+
 public class VeiculoAutomotor implements Comparable<VeiculoAutomotor>, Tributavel {
     protected String modelo;
     protected double valorDeMercado;
@@ -15,7 +17,7 @@ public class VeiculoAutomotor implements Comparable<VeiculoAutomotor>, Tributave
     }
 
     @Override
-    public double getValorIpi{
+    public double getValorIpi(){
         return this.valorDeMercado * 0.20;
     }
 
